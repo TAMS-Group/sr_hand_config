@@ -41,10 +41,8 @@ sh_rh_lfj0_position_controller:
     friction_deadband: 2000.0
     i: 0.0
     i_clamp: 0.0
-    max_force: 0.0
-#    max_force: 600.0
-#    p: -5300.0 -- disabled by default because of the unstable cable -- be careful when you reenable this -- v4hn@20211208
-    p: 0.0
+    max_force: 600.0
+    p: -5300.0
     position_deadband: 0.002
   type: sr_mechanism_controllers/SrhJointPositionController
 sh_rh_lfj3_position_controller:
