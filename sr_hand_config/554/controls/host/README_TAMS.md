@@ -23,3 +23,5 @@ However, the files describe
 and
 2. an effort controller to be used in torque mode mode; SrhEffortJointController:
    it just forwards the commanded efforts to the faster update loop in the palm firmware
+
+-- v4hn@2023
