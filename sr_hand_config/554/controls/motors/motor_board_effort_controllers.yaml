@@ -1,6 +1,11 @@
 # Reduced max-PWM for now - default is max_pwm: 600 in each entry
 # More is not needed in recent experiments
 # -- Shuang Li ~202104
+
+# reduced tau from 0.05 to 0.02 to reduce low-pass-filtering on joint readings
+# published to /joint_states. these values should probably not even be affected by a *controller* config
+# here, but the separate controllers definitely need the smoothing in practice.
+# -- Michael Goerner ~202406
 ffj0:
   backlash_compensation: true
   pid:
@@ -19,7 +24,7 @@ ffj0:
     torque_limit: 500
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 ffj3:
   backlash_compensation: true
   pid:
@@ -38,7 +43,7 @@ ffj3:
     torque_limit: 450
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 ffj4:
   backlash_compensation: true
   pid:
@@ -57,7 +62,7 @@ ffj4:
     torque_limit: 350
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 lfj0:
   backlash_compensation: true
   pid:
@@ -76,7 +81,7 @@ lfj0:
     torque_limit: 500
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 lfj3:
   backlash_compensation: true
   pid:
@@ -95,7 +100,7 @@ lfj3:
     torque_limit: 450
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 lfj4:
   backlash_compensation: true
   pid:
@@ -114,7 +119,7 @@ lfj4:
     torque_limit: 350
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 lfj5:
   backlash_compensation: true
   pid:
@@ -133,7 +138,7 @@ lfj5:
     torque_limit: 450
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 mfj0:
   backlash_compensation: true
   pid:
@@ -152,7 +157,7 @@ mfj0:
     torque_limit: 500
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 mfj3:
   backlash_compensation: true
   pid:
@@ -171,7 +176,7 @@ mfj3:
     torque_limit: 450
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 mfj4:
   backlash_compensation: true
   pid:
@@ -190,7 +195,7 @@ mfj4:
     torque_limit: 350
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 rfj0:
   backlash_compensation: true
   pid:
@@ -209,7 +214,7 @@ rfj0:
     torque_limit: 500
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 rfj3:
   backlash_compensation: true
   pid:
@@ -228,7 +233,7 @@ rfj3:
     torque_limit: 450
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 rfj4:
   backlash_compensation: true
   pid:
@@ -247,7 +252,7 @@ rfj4:
     torque_limit: 350
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 thj1:
   backlash_compensation: true
   pid:
@@ -266,7 +271,7 @@ thj1:
     torque_limit: 400
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 thj2:
   backlash_compensation: true
   pid:
@@ -285,7 +290,7 @@ thj2:
     torque_limit: 400
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 thj3:
   backlash_compensation: true
   pid:
@@ -304,7 +309,7 @@ thj3:
     torque_limit: 350
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 thj4:
   backlash_compensation: false
   pid:
@@ -323,7 +328,7 @@ thj4:
     torque_limit: 150
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 thj5:
   backlash_compensation: false
   pid:
@@ -342,7 +347,7 @@ thj5:
     torque_limit: 150
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 wrj1:
   backlash_compensation: false
   pid:
@@ -361,7 +366,7 @@ wrj1:
     torque_limit: 200
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
 wrj2:
   backlash_compensation: false
   pid:
@@ -380,4 +385,4 @@ wrj2:
     torque_limit: 200
     torque_limiter_gain: 64
   pos_filter:
-    tau: 0.05
+    tau: 0.02
